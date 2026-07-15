@@ -4,8 +4,7 @@
 
 <br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=20&duration=2800&pause=700&color=2563EB&center=true&vCenter=true&repeat=true&width=700&height=52;Augmented+Reality+Food+Adventure+Game.;Explore+Global+Cuisines+in+AR+Environment.;Multi-Sensory+Experience+%7C+Virtual+Commerce.;Software+Engineering+Group+Project+CS2223." alt="Typing Animation" />
-
+<img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=20&duration=2800&pause=700&color=2563EB&center=true&vCenter=true&repeat=true&width=800&height=52&lines=Augmented+Reality+Food+Adventure+Game;Explore+Global+Cuisines+with+Augmented+Reality;Immersive+Multi-Sensory+Dining+Experience;Virtual+Commerce+%7C+ARCore+%7C+Software+Engineering+Project" alt="Typing Animation" />
 <br><br>
 
 An innovative **Augmented Reality (AR) Food Adventure Game** that combines virtual and physical worlds to provide users with a lifelike dining experience. Explore diverse cuisines, interact with virtual food, and experience multi-sensory dining through AR technology.
@@ -145,8 +144,12 @@ Augmented-Reality-Game/
 
 ## 1️⃣ Use Case Diagram
 
+<h2 align="center">🏗️ Use Case Diagram</h2>
+
 <p align="center">
-<img src="https://via.placeholder.com/900x500?text=Use+Case+Diagram" alt="Use Case Diagram"/>
+  <img src="images/use-case-diagram.png"
+       alt="Use Case Diagram"
+       width="900"/>
 </p>
 
 ### 👥 Actors
