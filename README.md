@@ -632,6 +632,3 @@ See the **LICENSE** file for more information.
 </a>
 
 </div>
-└── tests/
-    ├── unit_tests/
-    └── integration_tests/
