@@ -628,7 +628,7 @@ See the **LICENSE** file for more information.
 <br>
 
 <a href="https://github.com/maira333-mmm/Augmented-Reality-Game/commits/main">
-<img src="https://img.shields.io/github/last-commit/maira333-mmm/Augmented-Reality-Game?style=for-the-badge&label=LAST%20UPDATE" alt="Last Update"/>
+
 </a>
 
 </div>
