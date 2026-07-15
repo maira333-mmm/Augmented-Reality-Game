@@ -136,53 +136,66 @@ Augmented-Reality-Game/
 │
 ---
 
+
 # 🏗️ Architecture & Design
 
-## 📌 UML Diagrams Overview
+The **Augmented Reality Food Adventure Game** was designed using standard Software Engineering UML models to visualize system functionality, user interaction, object relationships, and overall architecture.
 
 ---
 
-## 1️⃣ Use Case Diagram
-
-<h2 align="center">🏗️ Use Case Diagram</h2>
-
-<p align="center">
-  <img src="images/use-case-diagram.png"
-       alt="Use Case Diagram"
-       width="900"/>
-</p>
+# 1️⃣ Use Case Diagram
 
 ### 👥 Actors
 
-- 👤 User
-- 🖥️ System
+| Actor | Responsibility |
+|--------|----------------|
+| 👤 User | Explores cuisines, interacts with AR food objects, purchases virtual items |
+| 🖥️ System | Handles authentication, AR rendering, sensory feedback, and commerce operations |
 
 ### 🎯 Main Use Cases
 
 - 🔒 Privacy Functionality
 - 🔗 Smooth AR Integration
 - 🍽️ Realistic & Sensory Experience
-- 🌍 Diverse Culinary Options
+- 🌍 Explore Global Cuisines
 - 🛒 Virtual Commerce System
+
+### 📌 Use Case Overview
+
+```text
+                    User
+                      │
+ ┌────────────────────┼────────────────────┐
+ │                    │                    │
+ ▼                    ▼                    ▼
+Privacy          Explore Cuisines     Virtual Commerce
+ │                    │                    │
+ ▼                    ▼                    ▼
+Secure Login      Browse Dishes       Buy / Sell Items
+ │                    │                    │
+ └──────────────┬─────┴─────────────┬──────┘
+                ▼                   ▼
+         AR Interaction      Sensory Experience
+```
 
 ---
 
-## 2️⃣ Fully Dressed Use Cases
+# 2️⃣ Fully Dressed Use Cases
 
 <details>
 <summary><b>🔒 Privacy Functionality</b></summary>
 
 | Attribute | Description |
 |------------|-------------|
-| **Use Case** | Privacy Functionality |
-| **Description** | Protect user privacy and secure all online transactions. |
-| **Primary Actor** | User |
-| **Supporting Actor** | System |
-| **Precondition** | User is logged into the AR dining platform. |
-| **Post Condition** | Personal information is securely stored and transactions are completed successfully. |
-| **Trigger** | User performs an action requiring authentication or payment. |
-| **Main Flow** | Validate credentials → Encrypt user data → Process secure transaction. |
-| **Alternative Flow** | In-game rewards, reporting inappropriate users, moderation support. |
+| Use Case | Privacy Functionality |
+| Description | Protect user privacy and secure online transactions. |
+| Primary Actor | User |
+| Supporting Actor | System |
+| Precondition | User is authenticated. |
+| Post Condition | Data is encrypted and transaction completed safely. |
+| Trigger | User performs login or payment. |
+| Main Flow | Authenticate → Encrypt Data → Complete Transaction |
+| Alternative Flow | Report abuse or earn virtual rewards |
 
 </details>
 
@@ -193,15 +206,15 @@ Augmented-Reality-Game/
 
 | Attribute | Description |
 |------------|-------------|
-| **Use Case** | Smooth AR Integration |
-| **Description** | Blend virtual food objects naturally into the real environment. |
-| **Primary Actor** | User |
-| **Supporting Actor** | System |
-| **Precondition** | Compatible AR device available. |
-| **Post Condition** | Virtual objects appear accurately within the environment. |
-| **Trigger** | User activates AR Mode. |
-| **Main Flow** | Initialize AR → Detect environment → Render food → Enable interaction. |
-| **Alternative Flow** | Recalibrate environment if tracking fails. |
+| Use Case | Smooth AR Integration |
+| Description | Blend virtual food naturally into the real environment. |
+| Primary Actor | User |
+| Supporting Actor | System |
+| Precondition | Compatible AR device available. |
+| Post Condition | Virtual objects rendered successfully. |
+| Trigger | User starts AR mode. |
+| Main Flow | Initialize AR → Detect Surface → Render Food → Interaction |
+| Alternative Flow | Recalibrate environment if tracking fails. |
 
 </details>
 
@@ -212,15 +225,15 @@ Augmented-Reality-Game/
 
 | Attribute | Description |
 |------------|-------------|
-| **Use Case** | Realistic & Sensory Experience |
-| **Description** | Deliver immersive food interaction using visual, audio and haptic feedback. |
-| **Primary Actor** | User |
-| **Supporting Actor** | System |
-| **Precondition** | User logged in and AR initialized. |
-| **Post Condition** | User experiences immersive interaction with virtual food. |
-| **Trigger** | User selects a food item. |
-| **Main Flow** | Render food → Apply sound effects → Trigger haptic feedback → Display animations. |
-| **Alternative Flow** | Customize sensory intensity based on user settings. |
+| Use Case | Realistic & Sensory Experience |
+| Description | Provide immersive visual, audio and haptic interaction. |
+| Primary Actor | User |
+| Supporting Actor | System |
+| Precondition | User logged in. |
+| Post Condition | User experiences realistic virtual dining. |
+| Trigger | Food item selected. |
+| Main Flow | Render → Animate → Play Audio → Haptic Feedback |
+| Alternative Flow | User customizes sensory settings. |
 
 </details>
 
@@ -231,14 +244,14 @@ Augmented-Reality-Game/
 
 | Attribute | Description |
 |------------|-------------|
-| **Use Case** | Diverse Culinary Options |
-| **Description** | Explore cuisines from around the world. |
-| **Primary Actor** | User |
-| **Precondition** | Internet connection available. |
-| **Post Condition** | User successfully explores cuisine information. |
-| **Trigger** | User selects "Explore Cuisines". |
-| **Main Flow** | Display cuisines → Show recipes → Show country information → Browse dishes. |
-| **Alternative Flow** | Offline message displayed when internet is unavailable. |
+| Use Case | Explore Global Cuisines |
+| Description | Browse cuisines from different countries. |
+| Primary Actor | User |
+| Precondition | Internet available. |
+| Post Condition | Cuisine information displayed successfully. |
+| Trigger | User selects Explore Cuisines. |
+| Main Flow | Display Categories → View Recipes → Learn History |
+| Alternative Flow | Offline notification shown. |
 
 </details>
 
@@ -249,152 +262,193 @@ Augmented-Reality-Game/
 
 | Attribute | Description |
 |------------|-------------|
-| **Use Case** | Virtual Commerce System |
-| **Description** | Purchase and sell virtual food items within the game. |
-| **Primary Actor** | User |
-| **Precondition** | User logged in with internet connection. |
-| **Post Condition** | Inventory and transaction history updated. |
-| **Trigger** | User opens Marketplace. |
-| **Main Flow** | Browse items → Buy/Sell → Update inventory → Save transaction. |
-| **Alternative Flow** | Earn virtual currency, report fraudulent listings. |
+| Use Case | Virtual Commerce |
+| Description | Buy and sell virtual food items. |
+| Primary Actor | User |
+| Precondition | User logged in. |
+| Post Condition | Inventory updated successfully. |
+| Trigger | Marketplace opened. |
+| Main Flow | Browse → Buy/Sell → Payment → Inventory Update |
+| Alternative Flow | Earn virtual currency through gameplay. |
 
 </details>
 
 ---
 
-## 3️⃣ Activity Diagram
+# 3️⃣ Activity Diagram
 
-<p align="center">
-<img src="https://via.placeholder.com/900x600?text=Activity+Diagram" alt="Activity Diagram"/>
-</p>
-
-### 🔄 Workflow
+### 🔄 System Workflow
 
 ```text
 Start
-   │
-   ▼
-Launch Game
-   │
-   ▼
-Select AR Mode
-   │
-   ▼
-Choose Cuisine
-   │
-   ▼
-Interact with Food
-   │
-   ▼
-Receive Sensory Feedback
-   │
-   ▼
-Purchase Food? (Optional)
-   │
-   ▼
-Continue Exploring / Exit
-```
-
----
-
-## 4️⃣ Sequence Diagram
-
-<p align="center">
-<img src="https://via.placeholder.com/900x500?text=Sequence+Diagram" alt="Sequence Diagram"/>
-</p>
-
-### 🔁 Interaction Flow
-
-```text
-User
-   │
-   ▼
-AR Interface
-   │
-   ▼
-Game Engine
-   │
-   ▼
-AR Renderer
-   │
-   ▼
+  │
+  ▼
+Launch Application
+  │
+  ▼
+User Login
+  │
+  ▼
+Initialize AR Engine
+  │
+  ▼
+Select Cuisine
+  │
+  ▼
+Render Food Object
+  │
+  ▼
+User Interaction
+  │
+  ▼
 Sensory Feedback
-   │
-   ▼
-Commerce System
+  │
+  ▼
+Marketplace (Optional)
+  │
+  ▼
+Exit Application
 ```
 
 ---
 
-## 5️⃣ System Sequence Diagram
+# 4️⃣ Sequence Diagram
 
-<p align="center">
-<img src="https://via.placeholder.com/900x450?text=System+Sequence+Diagram" alt="System Sequence Diagram"/>
-</p>
-
-### 🔄 System Flow
+### 🔁 Object Interaction
 
 ```text
 User
  │
  ▼
-Activate AR
+AR Interface
  │
  ▼
-System Initializes AR
+Game Engine
  │
  ▼
-Render Environment
+AR Renderer
+ │
+ ▼
+Sensory Module
+ │
+ ▼
+Commerce Module
+ │
+ ▼
+Database
+```
+
+### 📌 Description
+
+The sequence diagram illustrates how user requests are processed by the AR Interface, Game Engine, Renderer, Commerce Module, and Database during gameplay.
+
+---
+
+# 5️⃣ System Sequence Diagram
+
+### 🔄 High-Level System Flow
+
+```text
+User
+ │
+ ▼
+Launch Game
+ │
+ ▼
+System Authentication
+ │
+ ▼
+Initialize AR Environment
+ │
+ ▼
+Render Food Objects
  │
  ▼
 User Interaction
  │
  ▼
-Sensory Feedback
+Generate Sensory Feedback
  │
  ▼
 Marketplace Transaction
+ │
+ ▼
+Save User Progress
 ```
 
 ---
 
-## 6️⃣ Class Diagram
+# 6️⃣ Class Diagram
 
-<p align="center">
-<img src="https://via.placeholder.com/900x600?text=Class+Diagram" alt="Class Diagram"/>
-</p>
+### 📦 Major Classes
 
-### 📦 Core Classes
+| Class | Responsibility |
+|---------|----------------|
+| 🖥️ AREngine | AR rendering and tracking |
+| 🍔 FoodItem | Stores food information |
+| 🌍 CuisineCategory | Cuisine classification |
+| 👤 UserProfile | User account management |
+| 🛒 CommerceSystem | Marketplace operations |
+| 🎧 SensoryFeedback | Audio and haptic feedback |
+| 🌳 Environment | Physical environment mapping |
+| 👥 MultiplayerSession | Multiplayer interaction |
 
-- 🖥️ AREngine
-- 🍔 FoodItem
-- 🌍 CuisineCategory
-- 👤 UserProfile
-- 🛒 CommerceSystem
-- 🎧 SensoryFeedback
-- 🌳 Environment
-- 👥 MultiplayerSession
+### 📌 Relationship Overview
+
+```text
+UserProfile
+     │
+     ├────────► AREngine
+     │
+     ├────────► FoodItem
+     │
+     ├────────► CuisineCategory
+     │
+     └────────► CommerceSystem
+                     │
+                     ▼
+             SensoryFeedback
+```
 
 ---
 
-## 7️⃣ Domain Model
-
-<p align="center">
-<img src="https://via.placeholder.com/900x500?text=Domain+Model" alt="Domain Model"/>
-</p>
+# 7️⃣ Domain Model
 
 ### 📚 Main Entities
 
-- 👤 User
-- 🍕 Food
-- 🌍 Cuisine
-- 🏞️ Virtual Environment
-- 💳 Transaction
-- 🎧 Sensory Experience
-- 📱 AR Integration
+| Entity | Description |
+|---------|-------------|
+| 👤 User | Player profile |
+| 🍔 Food | Virtual food objects |
+| 🌍 Cuisine | Regional food categories |
+| 🏞️ Environment | AR world mapping |
+| 💳 Transaction | Purchase records |
+| 🎧 Sensory Experience | Haptic & audio feedback |
+| 📱 AR Integration | Device interaction |
+
+### 📌 Domain Relationships
+
+```text
+User
+ │
+ ├────────► Cuisine
+ │             │
+ │             ▼
+ │         Food Item
+ │             │
+ ▼             ▼
+Transaction → Commerce System
+ │
+ ▼
+Sensory Experience
+ │
+ ▼
+AR Environment
+```
 
 ---
 
+> **Note:** The UML diagrams presented above summarize the architecture and system design of the Augmented Reality Food Adventure Game. They represent the conceptual workflow, object interactions, and software structure used during the Software Engineering design phase.
 # 🛠 Technologies Used
 
 | Technology | Purpose |
